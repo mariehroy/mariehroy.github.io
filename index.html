@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marie Hoffmann, PhD — Marketing Measurement, Causal Inference & AI Governance</title>
+    <meta name="description" content="Marie Hoffmann, PhD — Principal Data Scientist specializing in causal inference, marketing measurement, model governance, and expert witness services. Dallas–Fort Worth, TX.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-ink: #1a1a1a;
+            --color-ink-light: #4a4a4a;
+            --color-ink-muted: #6e6e6e;
+            --color-rule: #c8c0b8;
+            --color-rule-light: #e2ddd7;
+            --color-bg: #faf9f7;
+            --color-bg-warm: #f4f1ec;
+            --color-accent: #5c3d2e;
+            --font-display: 'Cormorant Garamond', 'Georgia', serif;
+            --font-body: 'Source Sans 3', 'Helvetica Neue', sans-serif;
+            --max-width: 740px;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { font-size: 17px; scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-ink);
+            background: var(--color-bg);
+            line-height: 1.7;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* === HEADER === */
+        header {
+            padding: 4.5rem 2rem 3.5rem;
+            text-align: center;
+            border-bottom: 1px solid var(--color-rule);
+        }
+
+        header h1 {
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            line-height: 1.15;
+            color: var(--color-ink);
+            margin-bottom: 0.3rem;
+        }
+
+        header .subtitle {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--color-ink-muted);
+            letter-spacing: 0.02em;
+            margin-bottom: 1.6rem;
+        }
+
+        header .contact-line {
+            font-family: var(--font-body);
+            font-size: 0.82rem;
+            font-weight: 400;
+            color: var(--color-ink-muted);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        header .contact-line a {
+            color: var(--color-ink-muted);
+            text-decoration: none;
+            border-bottom: 1px solid var(--color-rule-light);
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        header .contact-line a:hover {
+            color: var(--color-accent);
+            border-color: var(--color-accent);
+        }
+
+        header .contact-line .sep {
+            margin: 0 0.6em;
+            color: var(--color-rule);
+        }
+
+        /* === NAV === */
+        nav {
+            text-align: center;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--color-rule-light);
+            background: var(--color-bg);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            font-family: var(--font-body);
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-ink-light);
+            text-decoration: none;
+            margin: 0 1.1em;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: var(--color-accent); }
+
+        /* === MAIN === */
+        main {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--color-rule-light);
+        }
+
+        section:last-of-type { border-bottom: none; }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 1.65rem;
+            font-weight: 600;
+            color: var(--color-ink);
+            margin-bottom: 1.4rem;
+            letter-spacing: 0.01em;
+        }
+
+        h3 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--color-ink);
+            margin-top: 1.8rem;
+            margin-bottom: 0.6rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--color-ink-light);
+        }
+
+        p.lead {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--color-ink);
+        }
+
+        /* === EXPERTISE GRID === */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem 2.5rem;
+            margin-top: 1.2rem;
+        }
+
+        .expertise-area h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-ink);
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid var(--color-rule-light);
+        }
+
+        .expertise-area p {
+            font-size: 0.92rem;
+            line-height: 1.65;
+            color: var(--color-ink-light);
+        }
+
+        /* === CAREER TIMELINE === */
+        .career-entry {
+            margin-bottom: 1.5rem;
+        }
+
+        .career-entry .role {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--color-ink);
+        }
+
+        .career-entry .org {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--color-ink-light);
+        }
+
+        .career-entry .dates {
+            font-size: 0.82rem;
+            color: var(--color-ink-muted);
+            letter-spacing: 0.02em;
+        }
+
+        .career-entry .note {
+            font-size: 0.9rem;
+            color: var(--color-ink-light);
+            margin-top: 0.3rem;
+        }
+
+        /* === PUBLICATIONS === */
+        .publication {
+            margin-bottom: 1.2rem;
+            padding-left: 1.2rem;
+            border-left: 2px solid var(--color-rule-light);
+        }
+
+        .publication .cite {
+            font-size: 0.92rem;
+            color: var(--color-ink-light);
+            line-height: 1.6;
+        }
+
+        .publication .cite em { color: var(--color-ink-muted); }
+
+        /* === EDUCATION === */
+        .degree {
+            margin-bottom: 1.2rem;
+        }
+
+        .degree .title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--color-ink);
+        }
+
+        .degree .institution {
+            font-family: var(--font-display);
+            font-style: italic;
+            color: var(--color-ink-light);
+        }
+
+        .degree .detail {
+            font-size: 0.88rem;
+            color: var(--color-ink-muted);
+            margin-top: 0.15rem;
+        }
+
+        /* === EXPERT WITNESS === */
+        .ew-note {
+            background: var(--color-bg-warm);
+            border: 1px solid var(--color-rule-light);
+            padding: 1.5rem 1.8rem;
+            margin-top: 1rem;
+            font-size: 0.93rem;
+            line-height: 1.7;
+        }
+
+        .ew-note p { color: var(--color-ink-light); margin-bottom: 0.6rem; }
+        .ew-note p:last-child { margin-bottom: 0; }
+
+        /* === PRIOR NAME NOTE === */
+        .name-note {
+            font-size: 0.85rem;
+            color: var(--color-ink-muted);
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+
+        /* === FOOTER === */
+        footer {
+            text-align: center;
+            padding: 2.5rem 2rem 3rem;
+            border-top: 1px solid var(--color-rule);
+        }
+
+        footer p {
+            font-size: 0.82rem;
+            color: var(--color-ink-muted);
+            letter-spacing: 0.02em;
+        }
+
+        footer a {
+            color: var(--color-ink-muted);
+            text-decoration: none;
+            border-bottom: 1px solid var(--color-rule-light);
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        footer a:hover {
+            color: var(--color-accent);
+            border-color: var(--color-accent);
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 600px) {
+            html { font-size: 16px; }
+            header { padding: 3rem 1.5rem 2.5rem; }
+            header h1 { font-size: 2.1rem; }
+            main { padding: 0 1.5rem; }
+            .expertise-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            nav a { margin: 0 0.6em; font-size: 0.72rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Marie Hoffmann, PhD</h1>
+    <p class="subtitle">Marketing Measurement · Causal Inference · AI Governance</p>
+    <p class="contact-line">
+        Dallas–Fort Worth, TX
+        <span class="sep">·</span>
+        <a href="mailto:mariehoffmann.ds@gmail.com">mariehoffmann.ds@gmail.com</a>
+        <span class="sep">·</span>
+        <a href="https://linkedin.com/in/roymh" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#career">Career</a>
+    <a href="#publications">Publications</a>
+    <a href="#education">Education</a>
+    <a href="#advisory">Advisory</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<main>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2>About</h2>
+        <p class="lead">I am a principal-level data scientist and measurement strategist with a PhD in Decision Sciences (Computational Statistics) and more than ten years of applied experience designing, validating, and governing marketing measurement systems at enterprise scale.</p>
+        <p>My work sits at the intersection of causal inference, econometrics, and strategic decision enablement — building the measurement architecture that organizations rely on to allocate investment, evaluate impact, and defend analytical conclusions under scrutiny. I specialize in the full measurement stack: problem framing, identification strategy, model validation, KPI governance, and executive translation.</p>
+        <p>I am currently focused on AI/ML governance and model risk management — applying deep statistical and methodological expertise to the strategic oversight layer that determines whether models are trustworthy, auditable, and defensible.</p>
+        <p class="name-note">Prior publications appear under Marie H. Roy and Marie-Hélène Roy.</p>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section id="expertise">
+        <h2>Areas of Expertise</h2>
+        <div class="expertise-grid">
+            <div class="expertise-area">
+                <h3>Marketing Measurement &amp; Attribution</h3>
+                <p>Marketing Mix Modeling (MMM), multi-touch attribution (MTA), incrementality and lift measurement, media ROI and elasticity modeling, geo-lift and difference-in-differences experimental design, unified measurement architecture.</p>
+            </div>
+            <div class="expertise-area">
+                <h3>Causal Inference &amp; Experimentation</h3>
+                <p>A/B testing design and validity, quasi-experimental methods, difference-in-differences, propensity score methods, identification strategy under real-world constraints, causal vs. correlational claim evaluation.</p>
+            </div>
+            <div class="expertise-area">
+                <h3>AI/ML Governance &amp; Model Risk</h3>
+                <p>Model risk evaluation and validation, bias detection and fairness assessment, audit oversight and reproducibility standards, drift monitoring, regulatory alignment (NIST AI RMF, EU AI Act, ISO 42001), executive risk communication.</p>
+            </div>
+            <div class="expertise-area">
+                <h3>Statistical Modeling &amp; Econometrics</h3>
+                <p>Bayesian and hierarchical models, time-series forecasting, market-response and elasticity modeling, nonparametric methods, model specification and performance evaluation, predictive and causal modeling frameworks.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAREER -->
+    <section id="career">
+        <h2>Career Summary</h2>
+
+        <div class="career-entry">
+            <p class="role">Senior Data Scientist, Measurement Science (Contract)</p>
+            <p class="org">Southern Glazer's Wine &amp; Spirits</p>
+            <p class="dates">2025 – 2026</p>
+            <p class="note">KPI governance, measurement architecture, and analytics leadership coverage for digital product analytics across $1.5B+ quarterly influenceable revenue.</p>
+        </div>
+
+        <div class="career-entry">
+            <p class="role">Principal Data Scientist / Measurement Lead</p>
+            <p class="org">HP Inc.</p>
+            <p class="dates">2020 – 2025</p>
+            <p class="note">Led the design and execution of marketing measurement architecture integrating MMM, MTA, incrementality, and brand analytics across global business units, influencing $500M+ in investment decisions. Directed third-party model audits and established validation standards across 20+ deployed solutions.</p>
+        </div>
+
+        <div class="career-entry">
+            <p class="role">Senior Data Scientist</p>
+            <p class="org">Solsten (Berlin / Remote)</p>
+            <p class="dates">2019 – 2020</p>
+            <p class="note">Psychometric modeling, bias detection in ML frameworks, and behavioral analytics for gaming and digital products.</p>
+        </div>
+
+        <div class="career-entry">
+            <p class="role">Lead Data Scientist</p>
+            <p class="org">Age of Learning</p>
+            <p class="dates">2018 – 2019</p>
+            <p class="note">Educational data mining, engagement analytics, and predictive modeling for children's learning platforms.</p>
+        </div>
+
+        <div class="career-entry">
+            <p class="role">Decision Sciences Researcher</p>
+            <p class="org">GERAD / Tech3Lab, Université de Montréal &amp; HEC Montréal</p>
+            <p class="dates">2014 – 2018</p>
+            <p class="note">Nonparametric inference methodologies, ensemble learning frameworks, and neuro-marketing research.</p>
+        </div>
+
+        <div class="career-entry">
+            <p class="role">Foundation Roles</p>
+            <p class="org">Deloitte (Audit &amp; Assurance) · Rio Tinto Alcan (SOX Financial Controls)</p>
+            <p class="note">Audit discipline and financial controls experience that informs current model governance and compliance work.</p>
+        </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+        <h2>Selected Publications</h2>
+
+        <div class="publication">
+            <p class="cite"><strong>Roy, M.H.</strong> &amp; Shapiro, S. (2024). Bridging the Gap of MMM and MTA in a Cookieless World. <em>I-COM Global Summit, Malaga, Spain.</em></p>
+        </div>
+
+        <div class="publication">
+            <p class="cite"><strong>Roy, M.H.</strong> &amp; Larocque, D. (2019). Prediction intervals for random forests. <em>Statistical Methods in Medical Research, 29</em>(1), 205–229.</p>
+        </div>
+
+        <div class="publication">
+            <p class="cite">Owen, V.E., <strong>Roy, M.H.</strong>, Thai, K.P., Burnett, V., Jacobs, D., &amp; Keylor, E. (2019). Detecting wheel spinning and productive persistence in educational games. <em>Educational Data Mining Conference.</em></p>
+        </div>
+
+        <div class="publication">
+            <p class="cite"><strong>Roy, M.H.</strong> (2018). Adapting ensemble predictive modeling for educational video games. <em>IDEAS SoCal AI &amp; Data Science Conference, Los Angeles.</em></p>
+        </div>
+
+        <div class="publication">
+            <p class="cite"><strong>Roy, M.H.</strong>, Larocque, D., &amp; Dupuis, D. (2015). Robust variable selection with a multiple step bootstrap procedure. <em>Joint Statistical Meeting, Seattle.</em></p>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+        <h2>Education &amp; Certifications</h2>
+
+        <div class="degree">
+            <p class="title">Ph.D., Decision Sciences — Computational Statistics</p>
+            <p class="institution">Université de Montréal, 2018</p>
+            <p class="detail">Dissertation: Three Essays on Nonparametric Prediction Intervals and Robust Variable Selection</p>
+            <p class="detail">NSERC Full Doctoral Scholarship (Natural Sciences and Engineering Research Council of Canada)</p>
+        </div>
+
+        <div class="degree">
+            <p class="title">M.Sc., Statistics &amp; Data Mining (Business Intelligence, Decision Sciences)</p>
+            <p class="institution">HEC Montréal, 2011</p>
+            <p class="detail">With Great Distinction (4.09 GPA)</p>
+        </div>
+
+        <div class="degree">
+            <p class="title">B.B.A., Financial Markets &amp; Economics</p>
+            <p class="institution">HEC Montréal, 2008</p>
+        </div>
+
+        <div class="degree" style="margin-top: 1.8rem; padding-top: 1rem; border-top: 1px solid var(--color-rule-light);">
+            <p class="title">AIGP — AI Governance Professional (In Progress)</p>
+            <p class="institution">International Association of Privacy Professionals (IAPP)</p>
+        </div>
+    </section>
+
+    <!-- ADVISORY / EXPERT WITNESS -->
+    <section id="advisory">
+        <h2>Advisory &amp; Expert Witness</h2>
+        <p>I am available for expert consultation, report preparation, and testimony in matters involving marketing measurement, causal inference, statistical modeling, and model governance. My opinions are grounded in a decade of consequential, real-world application at enterprise scale — not theoretical exercises.</p>
+        <div class="ew-note">
+            <p><strong>Practice areas include:</strong> marketing ROI and attribution disputes, advertising effectiveness and media contract disputes, ad fraud and invalid traffic assessment, damages quantification involving marketing or sales data, statistical discrimination claims, data quality and integrity disputes, and intellectual property involving proprietary measurement methodologies.</p>
+            <p>For engagement inquiries, please contact me directly at <a href="mailto:mariehoffmann.ds@gmail.com">mariehoffmann.ds@gmail.com</a>.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" style="text-align: center; padding: 3rem 0 2rem;">
+        <h2>Contact</h2>
+        <p style="font-size: 1.05rem; margin-bottom: 0.5rem;"><a href="mailto:mariehoffmann.ds@gmail.com">mariehoffmann.ds@gmail.com</a></p>
+        <p style="margin-bottom: 0.5rem;"><a href="https://linkedin.com/in/roymh" target="_blank" rel="noopener">linkedin.com/in/roymh</a></p>
+        <p style="color: var(--color-ink-muted);">Dallas–Fort Worth, TX</p>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Marie Hoffmann, PhD. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
