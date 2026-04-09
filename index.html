@@ -44,14 +44,36 @@
             border-bottom: 1px solid var(--color-rule);
         }
 
+        .header-inner {
+            max-width: 740px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            text-align: left;
+        }
+
         .headshot {
-            width: 160px;
-            height: 160px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 1.6rem;
+            flex-shrink: 0;
             border: 3px solid var(--color-rule-light);
             filter: grayscale(8%);
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        @media (max-width: 600px) {
+            .header-inner {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.2rem;
+            }
+            .headshot { width: 120px; height: 120px; }
         }
 
         header h1 {
@@ -322,16 +344,20 @@
 <body>
 
 <header>
-    <img src="headshot.jpg" alt="Marie Hoffmann, PhD" class="headshot" width="160" height="160">
-    <h1>Marie Hoffmann, PhD</h1>
-    <p class="subtitle">Marketing Measurement · Causal Inference · AI Governance</p>
-    <p class="contact-line">
-        Dallas–Fort Worth, TX
-        <span class="sep">·</span>
-        <a href="mailto:mariehoffmann.ds@gmail.com">mariehoffmann.ds@gmail.com</a>
-        <span class="sep">·</span>
-        <a href="https://linkedin.com/in/roymh" target="_blank" rel="noopener">LinkedIn</a>
-    </p>
+    <div class="header-inner">
+        <img src="headshot.jpg" alt="Marie Hoffmann, PhD" class="headshot" width="150" height="150">
+        <div class="header-text">
+            <h1>Marie Hoffmann, PhD</h1>
+            <p class="subtitle">Marketing Measurement · Causal Inference · AI Governance</p>
+            <p class="contact-line">
+                Dallas–Fort Worth, TX
+                <span class="sep">·</span>
+                <a href="mailto:mariehoffmann.ds@gmail.com">mariehoffmann.ds@gmail.com</a>
+                <span class="sep">·</span>
+                <a href="https://linkedin.com/in/roymh" target="_blank" rel="noopener">LinkedIn</a>
+            </p>
+        </div>
+    </div>
 </header>
 
 <nav>
