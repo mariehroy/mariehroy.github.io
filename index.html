@@ -3,11 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marie Hoffmann, PhD — Marketing Measurement, Causal Inference &amp; Expert Witness</title>
-    <meta name="description" content="Marie Hoffmann, PhD — independent expert and advisor in marketing measurement, causal inference, and damages quantification. Independent measurement validation, incrementality and attribution audit, expert witness and litigation support. Dallas–Fort Worth, TX.">
+    <title>Marie Hoffmann, PhD — Independent Expert in Marketing Measurement, Causal Inference &amp; Damages</title>
+    <meta name="description" content="Marie Hoffmann, PhD — independent evaluation of marketing measurement, causal claims, and damages. Independent measurement validation and audit; expert witness and litigation support in marketing-measurement, statistical-methodology, and damages disputes. Dallas–Fort Worth, TX.">
+    <link rel="canonical" href="https://drmariehoffmann.com/">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Marie Hoffmann, PhD — Independent Expert in Marketing Measurement, Causal Inference &amp; Damages">
+    <meta property="og:description" content="Independent evaluation of marketing measurement, causal claims, and damages. Measurement validation and audit; expert witness and litigation support.">
+    <meta property="og:url" content="https://drmariehoffmann.com/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Marie Hoffmann",
+      "honorificSuffix": "PhD",
+      "alternateName": ["Marie H. Roy", "Marie-Hélène Roy"],
+      "jobTitle": "Independent Expert and Advisor — Marketing Measurement, Causal Inference, and Damages Quantification",
+      "description": "Independent evaluation of marketing measurement, causal claims, and damages. Independent measurement validation and audit; expert witness and litigation support.",
+      "url": "https://drmariehoffmann.com/",
+      "email": "mailto:mariehoffmann.ds@gmail.com",
+      "sameAs": ["https://linkedin.com/in/roymh"],
+      "homeLocation": { "@type": "Place", "name": "Dallas–Fort Worth, Texas, United States" },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Université de Montréal" },
+        { "@type": "CollegeOrUniversity", "name": "HEC Montréal" }
+      ],
+      "knowsAbout": [
+        "Marketing mix modeling",
+        "Incrementality and lift measurement",
+        "Multi-touch attribution",
+        "Causal inference",
+        "Experimental design and A/B testing",
+        "Prediction intervals and uncertainty quantification",
+        "Random forests",
+        "Model validation and reproducibility",
+        "Damages quantification"
+      ]
+    }
+    </script>
     <style>
         :root {
             --color-ink: #1a1a1a;
@@ -21,6 +56,7 @@
             --font-display: 'Cormorant Garamond', 'Georgia', serif;
             --font-body: 'Source Sans 3', 'Helvetica Neue', sans-serif;
             --max-width: 740px;
+            --nav-height: 3.4rem;
         }
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -35,6 +71,43 @@
             font-weight: 400;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* === ACCESSIBILITY === */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid var(--color-accent);
+            outline-offset: 3px;
+            border-radius: 1px;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: 1rem;
+            top: -4rem;
+            z-index: 20;
+            padding: 0.5rem 0.9rem;
+            background: var(--color-bg-warm);
+            color: var(--color-ink);
+            border: 1px solid var(--color-rule);
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: top 0.15s;
+        }
+        .skip-link:focus { top: 1rem; }
+
+        .visually-hidden {
+            position: absolute !important;
+            width: 1px; height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            white-space: nowrap;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { transition: none !important; }
         }
 
         /* === HEADER === */
@@ -135,6 +208,7 @@
         }
 
         nav a {
+            display: inline-block;
             font-family: var(--font-body);
             font-size: 0.78rem;
             font-weight: 500;
@@ -143,10 +217,17 @@
             color: var(--color-ink-light);
             text-decoration: none;
             margin: 0 1.1em;
-            transition: color 0.2s;
+            padding-bottom: 2px;
+            border-bottom: 1px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
         }
 
         nav a:hover { color: var(--color-accent); }
+
+        nav a.active {
+            color: var(--color-accent);
+            border-bottom-color: var(--color-accent);
+        }
 
         /* === MAIN === */
         main {
@@ -158,6 +239,7 @@
         section {
             padding: 3rem 0;
             border-bottom: 1px solid var(--color-rule-light);
+            scroll-margin-top: var(--nav-height);
         }
 
         section:last-of-type { border-bottom: none; }
@@ -190,6 +272,14 @@
             line-height: 1.8;
             color: var(--color-ink);
         }
+
+        main a {
+            color: var(--color-accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--color-rule);
+            transition: border-color 0.2s;
+        }
+        main a:hover { border-bottom-color: var(--color-accent); }
 
         /* === EXPERTISE GRID === */
         .expertise-grid {
@@ -226,6 +316,7 @@
             font-weight: 600;
             font-size: 0.95rem;
             color: var(--color-ink);
+            margin-bottom: 0;
         }
 
         .career-entry .org {
@@ -233,21 +324,43 @@
             font-style: italic;
             font-size: 1rem;
             color: var(--color-ink-light);
+            margin-bottom: 0;
         }
 
         .career-entry .dates {
             font-size: 0.82rem;
             color: var(--color-ink-muted);
             letter-spacing: 0.02em;
+            margin-bottom: 0;
         }
 
         .career-entry .note {
             font-size: 0.9rem;
             color: var(--color-ink-light);
             margin-top: 0.3rem;
+            margin-bottom: 0;
+        }
+
+        .career-group-label {
+            font-family: var(--font-body);
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-ink-muted);
+            margin: 2rem 0 0.8rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--color-rule-light);
         }
 
         /* === PUBLICATIONS === */
+        .pub-group h3 {
+            font-size: 1.15rem;
+            margin-top: 1.6rem;
+            margin-bottom: 0.8rem;
+        }
+        .pub-group:first-of-type h3 { margin-top: 0.4rem; }
+
         .publication {
             margin-bottom: 1.2rem;
             padding-left: 1.2rem;
@@ -258,9 +371,17 @@
             font-size: 0.92rem;
             color: var(--color-ink-light);
             line-height: 1.6;
+            margin-bottom: 0;
         }
 
         .publication .cite em { color: var(--color-ink-muted); }
+
+        .publication .cite .doi {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--color-ink-muted);
+            margin-top: 0.15rem;
+        }
 
         /* === EDUCATION === */
         .degree {
@@ -271,32 +392,43 @@
             font-weight: 600;
             font-size: 0.95rem;
             color: var(--color-ink);
+            margin-bottom: 0;
         }
 
         .degree .institution {
             font-family: var(--font-display);
             font-style: italic;
             color: var(--color-ink-light);
+            margin-bottom: 0;
         }
 
         .degree .detail {
             font-size: 0.88rem;
             color: var(--color-ink-muted);
             margin-top: 0.15rem;
+            margin-bottom: 0;
         }
 
-        /* === EXPERT WITNESS === */
+        .edu-subhead {
+            font-size: 1.15rem;
+            margin-top: 1.8rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--color-rule-light);
+        }
+
+        /* === ENGAGEMENT PANEL === */
         .ew-note {
             background: var(--color-bg-warm);
             border: 1px solid var(--color-rule-light);
             padding: 1.5rem 1.8rem;
-            margin-top: 1rem;
+            margin-top: 1.8rem;
             font-size: 0.93rem;
             line-height: 1.7;
         }
 
-        .ew-note p { color: var(--color-ink-light); margin-bottom: 0.6rem; }
+        .ew-note p { color: var(--color-ink-light); margin-bottom: 0.7rem; }
         .ew-note p:last-child { margin-bottom: 0; }
+        .ew-note p strong { color: var(--color-ink); font-weight: 600; }
 
         /* === ADVISORY OFFERS === */
         .offer-block { margin-top: 1.8rem; }
@@ -339,6 +471,12 @@
             margin-top: 0.5rem;
         }
 
+        /* === CONTACT === */
+        #contact { text-align: center; padding: 3rem 0 2rem; }
+        #contact .contact-primary { font-size: 1.05rem; margin-bottom: 0.5rem; }
+        #contact .contact-secondary { margin-bottom: 0.5rem; }
+        #contact .contact-loc { color: var(--color-ink-muted); }
+
         /* === FOOTER === */
         footer {
             text-align: center;
@@ -369,38 +507,46 @@
             html { font-size: 16px; }
             header { padding: 3rem 1.5rem 2.5rem; }
             header h1 { font-size: 2.1rem; }
+            header .contact-line .sep { margin: 0 0.4em; }
             main { padding: 0 1.5rem; }
             .expertise-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-            nav a { margin: 0 0.6em; font-size: 0.72rem; }
+            :root { --nav-height: 5.8rem; }
+            nav { padding: 0.8rem 1rem; }
+            nav a { margin: 0.15em 0.6em; font-size: 0.72rem; }
+            .ew-note { padding: 1.2rem 1.3rem; }
         }
     </style>
 </head>
 <body>
 
+<a class="skip-link" href="#about">Skip to content</a>
+
 <header>
     <div class="header-inner">
-        <img src="headshot.jpg" alt="Marie Hoffmann, PhD" class="headshot" width="150" height="150">
+        <img src="headshot.jpg" alt="Portrait of Marie Hoffmann, PhD" class="headshot" width="150" height="150">
         <div class="header-text">
             <h1>Marie Hoffmann, PhD</h1>
-            <p class="subtitle">Marketing Measurement · Causal Inference · Damages Quantification</p>
+            <p class="subtitle">Independent evaluation of marketing measurement, causal claims, and damages</p>
             <p class="contact-line">
                 Dallas–Fort Worth, TX
-                <span class="sep">·</span>
+                <span class="sep" aria-hidden="true">·</span>
                 <a href="mailto:mariehoffmann.ds@gmail.com">mariehoffmann.ds@gmail.com</a>
-                <span class="sep">·</span>
+                <span class="sep" aria-hidden="true">·</span>
                 <a href="https://linkedin.com/in/roymh" target="_blank" rel="noopener">LinkedIn</a>
+                <span class="sep" aria-hidden="true">·</span>
+                <a href="Marie_Hoffmann_CV.pdf" type="application/pdf">CV (PDF)</a>
             </p>
         </div>
     </div>
 </header>
 
-<nav>
+<nav aria-label="Site sections">
     <a href="#about">About</a>
+    <a href="#advisory">Advisory</a>
     <a href="#expertise">Expertise</a>
     <a href="#career">Career</a>
     <a href="#publications">Publications</a>
     <a href="#education">Education</a>
-    <a href="#advisory">Advisory</a>
     <a href="#contact">Contact</a>
 </nav>
 
@@ -409,10 +555,46 @@
     <!-- ABOUT -->
     <section id="about">
         <h2>About</h2>
-        <p class="lead">I am an independent expert and advisor in marketing measurement, causal inference, and damages quantification, with a PhD in Decision Sciences (Computational Statistics) and more than ten years designing, validating, and governing causal measurement systems at enterprise scale.</p>
+        <p class="lead">I am an independent expert and advisor in marketing measurement, causal inference, and damages quantification, with a PhD in Decision Sciences (Computational Statistics) and more than a decade of experience building, validating, and independently evaluating predictive and causal models.</p>
         <p>My work sits at the intersection of causal inference, econometrics, and strategic decision enablement — the measurement architecture that organizations rely on to allocate investment, quantify impact, and defend analytical conclusions under scrutiny. I bring particular depth in marketing mix modeling, incrementality, attribution, A/B testing, and quasi-experimental methods, built from the ground up and made actionable for senior leadership across $500M+ in investment decisions.</p>
-        <p>A decade spent auditing whether third-party measurement methods truly capture incremental impact — combined with a Deloitte audit and SOX financial-controls background — is what I bring to independent validation, methodology review, and expert engagements. It is an evaluator's vantage point: assessing whether models and measurement are trustworthy, reproducible, and defensible.</p>
+        <p>More than a decade evaluating whether models deliver the reliability they claim — including more than four years auditing whether third-party marketing-measurement methods truly capture incremental impact — combined with early-career audit (Deloitte) and Sarbanes-Oxley controls (Rio Tinto Alcan) experience, is what I bring to independent validation, methodology review, and expert engagements. It is an evaluator's vantage point: assessing whether models and measurement are trustworthy, reproducible, and defensible.</p>
         <p class="name-note">Prior publications appear under Marie H. Roy and Marie-Hélène Roy.</p>
+    </section>
+
+    <!-- ADVISORY / EXPERT WITNESS -->
+    <section id="advisory">
+        <h2>Advisory &amp; Expert Engagements</h2>
+        <p>I work independently in two related capacities. Both rest on the same foundation: more than a decade evaluating whether models deliver the reliability they claim, including years spent auditing whether marketing-measurement methods truly capture incremental impact — grounded in consequential enterprise application rather than theory. As an independent party with no vendor stake, my role is to evaluate — not to sell a method or a tool.</p>
+
+        <div class="offer-block">
+            <h3>Independent Measurement Advisory</h3>
+            <p>For marketing and finance leaders who need a vendor-neutral assessment of whether their measurement is sound and their numbers are defensible:</p>
+            <ul class="offer-list">
+                <li><strong>Independent method validation</strong> — whether an MMM, attribution, or incrementality method actually measures incremental impact, or only appears to.</li>
+                <li><strong>Measurement audit &amp; assurance</strong> — independent review of a measurement stack for soundness, reproducibility, and defensibility.</li>
+                <li><strong>Vendor selection &amp; methodology review</strong> — structured, vendor-neutral evaluation of incrementality and measurement providers.</li>
+                <li><strong>Measurement standards &amp; neutral evaluation</strong> — defining what "incrementality" or "lift" means in practice, and serving as a neutral on measurement disagreements.</li>
+            </ul>
+        </div>
+
+        <div class="offer-block">
+            <h3>Expert Witness &amp; Litigation Support</h3>
+            <p>Expert consultation, report preparation, and testimony in disputes turning on marketing measurement, causal inference, statistical methodology, and damages:</p>
+            <ul class="offer-list">
+                <li>Marketing ROI, attribution, and incrementality-methodology disputes</li>
+                <li>False advertising and performance-claim substantiation (Lanham Act, FTC, state consumer-protection)</li>
+                <li>AdTech and measurement-vendor disputes; ad fraud and invalid-traffic assessment</li>
+                <li>Commercial damages and lost profits involving marketing or sales data</li>
+                <li>Expert rebuttal and methodology review of opposing statistical and causal models</li>
+            </ul>
+        </div>
+
+        <div class="ew-note">
+            <p><strong>Engagements.</strong> I am available for consulting and testifying engagements. Rates are provided on request.</p>
+            <p><strong>Testimony.</strong> I have been retained as a testifying expert in commercial litigation and have authored expert reports to Rule 26(a)(2)(B) disclosure standards. A list of testimony is available on request.</p>
+            <p><strong>Conflicts.</strong> Counsel are welcome to request a conflicts check before any substantive discussion; the names of the parties and, where known, related entities are sufficient.</p>
+            <p><strong>Contact.</strong> <a href="mailto:mariehoffmann.ds@gmail.com">mariehoffmann.ds@gmail.com</a> · <a href="Marie_Hoffmann_CV.pdf" type="application/pdf">Full CV (PDF)</a></p>
+        </div>
     </section>
 
     <!-- EXPERTISE -->
@@ -443,139 +625,179 @@
         <h2>Career Summary</h2>
 
         <div class="career-entry">
-            <p class="role">Senior Data Scientist, Measurement Science (Contract)</p>
+            <p class="role">Marketing Data Science Manager</p>
+            <p class="org">University of Phoenix</p>
+            <p class="dates">May 2026 – present</p>
+            <p class="note">Leads the marketing mix modeling workstream end to end — development, validation, simulation, and optimization — with ownership of methodology decisions and executive alignment. Applies causal inference and experimentation (geo-lift, incrementality, A/B testing) across multi-stage conversion funnels, and builds calibrated rare-event propensity models with explicit invalid-traffic detection and temporal-drift diagnostics.</p>
+        </div>
+
+        <div class="career-entry">
+            <p class="role">Senior Data Scientist, Measurement Science</p>
             <p class="org">Southern Glazer's Wine &amp; Spirits</p>
-            <p class="dates">2025 – 2026</p>
+            <p class="dates">November 2025 – February 2026</p>
             <p class="note">KPI governance, measurement architecture, and analytics leadership coverage for digital product analytics across $1.5B+ quarterly influenceable revenue.</p>
         </div>
 
         <div class="career-entry">
-            <p class="role">Principal Data Scientist / Measurement Lead</p>
+            <p class="role">R&amp;D Data Scientist — Personal Systems Quality</p>
             <p class="org">HP Inc.</p>
-            <p class="dates">2020 – 2025</p>
-            <p class="note">Led the design and execution of marketing measurement architecture integrating MMM, MTA, incrementality, and brand analytics across global business units, influencing $500M+ in investment decisions. Directed third-party model audits and established validation standards across 20+ deployed solutions.</p>
+            <p class="dates">January 2025 – November 2025</p>
+            <p class="note">Large-scale predictive modeling for hardware reliability: rare-event and anomaly detection of component failures across high-volume device telemetry, with a tunable detection-model series giving explicit control of the false-positive / true-positive trade-off, and full-life telemetry trend-detection and validation tooling.</p>
+        </div>
+
+        <div class="career-entry">
+            <p class="role">Principal Data Scientist — Marketing Measurement Lead</p>
+            <p class="org">HP Inc.</p>
+            <p class="dates">May 2020 – December 2024</p>
+            <p class="note">Advanced from Lead Data Scientist, Pricing &amp; Advanced Analytics (May 2020 – January 2023) to Principal Data Scientist and worldwide Marketing Measurement Lead (January 2023 – December 2024). Led the design and execution of marketing measurement architecture integrating MMM, MTA, incrementality, and brand analytics across global business units, influencing $500M+ in investment decisions. Directed third-party model audits and established validation standards across 20+ deployed models.</p>
         </div>
 
         <div class="career-entry">
             <p class="role">Senior Data Scientist</p>
-            <p class="org">Solsten (Berlin / Remote)</p>
-            <p class="dates">2019 – 2020</p>
-            <p class="note">Psychometric modeling, bias detection in ML frameworks, and behavioral analytics for gaming and digital products.</p>
+            <p class="org">Solsten</p>
+            <p class="dates">November 2019 – June 2020</p>
+            <p class="note">Behavioral and psychometric segmentation linking user traits to marketing tactics; personalization impact quantified through causal modeling and adaptive experimentation.</p>
         </div>
 
         <div class="career-entry">
             <p class="role">Lead Data Scientist</p>
             <p class="org">Age of Learning</p>
-            <p class="dates">2018 – 2019</p>
-            <p class="note">Educational data mining, engagement analytics, and predictive modeling for children's learning platforms.</p>
+            <p class="dates">February 2018 – November 2019</p>
+            <p class="note">Led the analysis of a randomized controlled efficacy study of an adaptive early-mathematics product, estimating causal learning gains with hierarchical mixed-effects models, power analysis, and IRT psychometrics; designed and deployed a live struggle-detection model with per-student prediction intervals; led methodology governance and technical training for the data-science team.</p>
         </div>
 
         <div class="career-entry">
-            <p class="role">Decision Sciences Researcher</p>
-            <p class="org">GERAD / Tech3Lab, Université de Montréal &amp; HEC Montréal</p>
+            <p class="role">Doctoral Researcher</p>
+            <p class="org">HEC Montréal / GERAD</p>
             <p class="dates">2014 – 2018</p>
-            <p class="note">Nonparametric inference methodologies, ensemble learning frameworks, and neuro-marketing research.</p>
+            <p class="note">Nonparametric (distribution-free) inference, prediction intervals, and high-dimensional and robust variable selection; ensemble methods for finite-mixture models.</p>
         </div>
 
         <div class="career-entry">
-            <p class="role">Foundation Roles</p>
-            <p class="org">Deloitte (Audit &amp; Assurance) · Rio Tinto Alcan (SOX Financial Controls)</p>
-            <p class="note">Audit discipline and financial controls experience that informs current model governance and compliance work.</p>
+            <p class="role">Research Data Analyst</p>
+            <p class="org">Tech3Lab, HEC Montréal</p>
+            <p class="dates">2016 – 2017</p>
+            <p class="note">Longitudinal models and design of experiments for engagement measurement; finite-mixture models with mixed effects for EEG data from a heterogeneous population.</p>
+        </div>
+
+        <p class="career-group-label">Early-Career Audit &amp; Financial Controls</p>
+
+        <div class="career-entry">
+            <p class="role">Audit &amp; Assurance Intern (Public Sector)</p>
+            <p class="org">Deloitte</p>
+            <p class="dates">Summer 2007</p>
+            <p class="note">Public-sector external financial audit: financial-record and transaction testing, internal-controls evaluation, and working-paper preparation.</p>
+        </div>
+
+        <div class="career-entry">
+            <p class="role">Sarbanes-Oxley Project Team</p>
+            <p class="org">Rio Tinto Alcan</p>
+            <p class="dates">Summer 2006</p>
+            <p class="note">SOX internal-controls testing over financial reporting — design and operating-effectiveness assessment, evidence collection, and control-deficiency documentation. Formal grounding in assurance and evidentiary review that informs current model-governance and validation work.</p>
         </div>
     </section>
 
     <!-- PUBLICATIONS -->
     <section id="publications">
-        <h2>Selected Publications</h2>
+        <h2>Publications &amp; Research</h2>
+        <p class="name-note">Published under the author's former name, Marie H. Roy / Marie-Hélène Roy.</p>
 
-        <div class="publication">
-            <p class="cite"><strong>Roy, M.H.</strong> &amp; Shapiro, S. (2024). Bridging the Gap of MMM and MTA in a Cookieless World. <em>I-COM Global Summit, Malaga, Spain.</em></p>
+        <div class="pub-group">
+            <h3>Peer-Reviewed</h3>
+
+            <div class="publication">
+                <p class="cite"><strong>Roy, M.-H.</strong>, &amp; Larocque, D. (2020). Prediction intervals with random forests. <em>Statistical Methods in Medical Research, 29</em>(1), 205–229. (First published online 2019.)
+                <span class="doi"><a href="https://doi.org/10.1177/0962280219829885" target="_blank" rel="noopener">doi:10.1177/0962280219829885</a></span></p>
+            </div>
+
+            <div class="publication">
+                <p class="cite"><strong>Roy, M.-H.</strong>, &amp; Larocque, D. (2012). Robustness of random forests for regression. <em>Journal of Nonparametric Statistics, 24</em>(4), 993–1006.
+                <span class="doi"><a href="https://doi.org/10.1080/10485252.2012.715161" target="_blank" rel="noopener">doi:10.1080/10485252.2012.715161</a></span></p>
+            </div>
+
+            <div class="publication">
+                <p class="cite">Owen, V. E., <strong>Roy, M.-H.</strong>, Thai, K. P., Burnett, V., Jacobs, D., Keylor, E., &amp; Baker, R. S. (2019). Detecting wheel-spinning and productive persistence in educational games. <em>Proceedings of the Educational Data Mining (EDM) Conference.</em></p>
+            </div>
         </div>
 
-        <div class="publication">
-            <p class="cite"><strong>Roy, M.H.</strong> &amp; Larocque, D. (2019). Prediction intervals for random forests. <em>Statistical Methods in Medical Research, 29</em>(1), 205–229.</p>
+        <div class="pub-group">
+            <h3>Software &amp; Implementation</h3>
+
+            <div class="publication">
+                <p class="cite">The prediction-interval methods of Roy &amp; Larocque (2020) are implemented in the CRAN package <a href="https://CRAN.R-project.org/package=RFpredInterval" target="_blank" rel="noopener">RFpredInterval</a> (Alakuş, Larocque &amp; Labbe), described in Alakuş, C., Larocque, D., &amp; Labbe, A. (2022). RFpredInterval: An R package for prediction intervals with random forests and boosted forests. <em>The R Journal, 14</em>(1), 300–320.
+                <span class="doi"><a href="https://doi.org/10.32614/RJ-2022-012" target="_blank" rel="noopener">doi:10.32614/RJ-2022-012</a></span></p>
+            </div>
         </div>
 
-        <div class="publication">
-            <p class="cite">Owen, V.E., <strong>Roy, M.H.</strong>, Thai, K.P., Burnett, V., Jacobs, D., &amp; Keylor, E. (2019). Detecting wheel spinning and productive persistence in educational games. <em>Educational Data Mining Conference.</em></p>
-        </div>
+        <div class="pub-group">
+            <h3>Conference Presentations</h3>
 
-        <div class="publication">
-            <p class="cite"><strong>Roy, M.H.</strong> (2018). Adapting ensemble predictive modeling for educational video games. <em>IDEAS SoCal AI &amp; Data Science Conference, Los Angeles.</em></p>
-        </div>
+            <div class="publication">
+                <p class="cite"><strong>Roy, M.-H.</strong>, &amp; Shapiro, S. (2024). Bridging the gap of MMM and MTA in a cookieless world. <em>I-COM Global Summit, Málaga, Spain.</em></p>
+            </div>
 
-        <div class="publication">
-            <p class="cite"><strong>Roy, M.H.</strong>, Larocque, D., &amp; Dupuis, D. (2015). Robust variable selection with a multiple step bootstrap procedure. <em>Joint Statistical Meeting, Seattle.</em></p>
+            <div class="publication">
+                <p class="cite"><strong>Roy, M.-H.</strong> (2018). Adapting ensemble predictive modeling for educational video games. <em>IDEAS SoCal AI &amp; Data Science Conference, Los Angeles.</em></p>
+            </div>
+
+            <div class="publication">
+                <p class="cite"><strong>Roy, M.-H.</strong>, Larocque, D., &amp; Dupuis, D. (2015). Robust variable selection with a multiple-step bootstrap procedure. <em>Joint Statistical Meetings (JSM), Seattle.</em></p>
+            </div>
+
+            <div class="publication">
+                <p class="cite"><strong>Roy, M.-H.</strong> (2013). A study of random forests using robust aggregation methods and splitting criterion. <em>Joint Statistical Meetings (JSM), Montréal.</em></p>
+            </div>
+
+            <div class="publication">
+                <p class="cite"><strong>Roy, M.-H.</strong> (2012). Robustness of random forests for regression. <em>International Conference on Robust Statistics (ICORS), Burlington.</em></p>
+            </div>
         </div>
     </section>
 
     <!-- EDUCATION -->
     <section id="education">
-        <h2>Education &amp; Certifications</h2>
+        <h2>Education &amp; Teaching</h2>
 
         <div class="degree">
-            <p class="title">Ph.D., Decision Sciences — Computational Statistics</p>
-            <p class="institution">Université de Montréal, 2018</p>
-            <p class="detail">Dissertation: Three Essays on Nonparametric Prediction Intervals and Robust Variable Selection</p>
-            <p class="detail">NSERC Full Doctoral Scholarship (Natural Sciences and Engineering Research Council of Canada)</p>
+            <p class="title">Ph.D., Decision Sciences (Quantitative Methods / Computational Statistics)</p>
+            <p class="institution">Université de Montréal (program administered by HEC Montréal), 2019</p>
+            <p class="detail">Dissertation: <em>Three Essays on Nonparametric Prediction Intervals and Robust Variable Selection</em></p>
+            <p class="detail">NSERC Alexander Graham Bell Canada Graduate Scholarship (CGS-D), Doctoral</p>
         </div>
 
         <div class="degree">
-            <p class="title">M.Sc., Statistics &amp; Data Mining (Business Intelligence, Decision Sciences)</p>
+            <p class="title">M.Sc., Business Intelligence (Statistics &amp; Data Mining)</p>
             <p class="institution">HEC Montréal, 2011</p>
-            <p class="detail">With Great Distinction (4.09 GPA)</p>
+            <p class="detail">With Great Distinction (GPA 4.09 / 4.3); Honour Roll. Thesis: <em>Robustness of Random Forests for Regression</em></p>
         </div>
 
         <div class="degree">
-            <p class="title">B.B.A., Financial Markets &amp; Economics</p>
+            <p class="title">B.B.A., Financial Markets</p>
             <p class="institution">HEC Montréal, 2008</p>
         </div>
 
-        <div class="degree" style="margin-top: 1.8rem; padding-top: 1rem; border-top: 1px solid var(--color-rule-light);">
+        <h3 class="edu-subhead">University Teaching</h3>
+
+        <div class="degree">
+            <p class="title">Lecturer, Statistics</p>
+            <p class="institution">HEC Montréal, 2013 – 2014</p>
+            <p class="detail">Instructor of record for an undergraduate probability and statistics course, delivered to three sections (in French).</p>
+        </div>
+
+        <h3 class="edu-subhead">Certifications</h3>
+
+        <div class="degree">
             <p class="title">AIGP — AI Governance Professional (In Progress)</p>
             <p class="institution">International Association of Privacy Professionals (IAPP)</p>
         </div>
     </section>
 
-    <!-- ADVISORY / EXPERT WITNESS -->
-    <section id="advisory">
-        <h2>Advisory &amp; Expert Engagements</h2>
-        <p>I work independently in two related capacities. Both rest on the same foundation: a decade auditing whether marketing-measurement methods truly capture incremental impact, grounded in consequential enterprise application rather than theory. As an independent party with no vendor stake, my role is to evaluate — not to sell a method or a tool.</p>
-
-        <div class="offer-block">
-            <h3>Independent Measurement Advisory</h3>
-            <p>For marketing and finance leaders who need a vendor-neutral assessment of whether their measurement is sound and their numbers are defensible:</p>
-            <ul class="offer-list">
-                <li><strong>Independent method validation</strong> — whether an MMM, attribution, or incrementality method actually measures incremental impact, or only appears to.</li>
-                <li><strong>Measurement audit &amp; assurance</strong> — independent review of a measurement stack for soundness, reproducibility, and defensibility.</li>
-                <li><strong>Vendor selection &amp; methodology review</strong> — structured, vendor-neutral evaluation of incrementality and measurement providers.</li>
-                <li><strong>Measurement standards &amp; neutral evaluation</strong> — defining what "incrementality" or "lift" means in practice, and serving as a neutral on measurement disagreements.</li>
-            </ul>
-        </div>
-
-        <div class="offer-block">
-            <h3>Expert Witness &amp; Litigation Support</h3>
-            <p>Expert consultation, report preparation, and testimony in disputes turning on marketing measurement, causal inference, statistical methodology, and damages:</p>
-            <ul class="offer-list">
-                <li>Marketing ROI, attribution, and incrementality-methodology disputes</li>
-                <li>False advertising and performance-claim substantiation (Lanham Act, FTC, state consumer-protection)</li>
-                <li>AdTech and measurement-vendor disputes; ad fraud and invalid-traffic assessment</li>
-                <li>Commercial damages and lost profits involving marketing or sales data</li>
-                <li>Expert rebuttal and methodology review of opposing statistical and causal models</li>
-            </ul>
-        </div>
-
-        <div class="ew-note">
-            <p>For independent validation, vendor-neutral evaluation, or expert engagements, please contact me directly at <a href="mailto:mariehoffmann.ds@gmail.com">mariehoffmann.ds@gmail.com</a>.</p>
-        </div>
-    </section>
-
     <!-- CONTACT -->
-    <section id="contact" style="text-align: center; padding: 3rem 0 2rem;">
+    <section id="contact">
         <h2>Contact</h2>
-        <p style="font-size: 1.05rem; margin-bottom: 0.5rem;"><a href="mailto:mariehoffmann.ds@gmail.com">mariehoffmann.ds@gmail.com</a></p>
-        <p style="margin-bottom: 0.5rem;"><a href="https://linkedin.com/in/roymh" target="_blank" rel="noopener">linkedin.com/in/roymh</a></p>
-        <p style="color: var(--color-ink-muted);">Dallas–Fort Worth, TX</p>
+        <p class="contact-primary"><a href="mailto:mariehoffmann.ds@gmail.com">mariehoffmann.ds@gmail.com</a></p>
+        <p class="contact-secondary"><a href="https://linkedin.com/in/roymh" target="_blank" rel="noopener">linkedin.com/in/roymh</a> · <a href="Marie_Hoffmann_CV.pdf" type="application/pdf">CV (PDF)</a></p>
+        <p class="contact-loc">Dallas–Fort Worth, TX</p>
     </section>
 
 </main>
@@ -583,6 +805,58 @@
 <footer>
     <p>&copy; 2026 Marie Hoffmann, PhD. All rights reserved.</p>
 </footer>
+
+<script>
+(function () {
+    var nav = document.querySelector('nav');
+    var links = Array.prototype.slice.call(document.querySelectorAll('nav a[href^="#"]'));
+    var sections = links.map(function (a) {
+        return document.getElementById(a.getAttribute('href').slice(1));
+    }).filter(Boolean);
+    if (!nav || !sections.length) return;
+
+    var current = null;
+    function setActive(id) {
+        if (id === current) return;
+        current = id;
+        links.forEach(function (a) {
+            var on = a.getAttribute('href') === '#' + id;
+            a.classList.toggle('active', on);
+            if (on) { a.setAttribute('aria-current', 'location'); } else { a.removeAttribute('aria-current'); }
+        });
+    }
+
+    function update() {
+        var offset = nav.offsetHeight + 24;
+        var y = window.scrollY || window.pageYOffset;
+        var atBottom = (window.innerHeight + y) >= (document.documentElement.scrollHeight - 2);
+        var active = null;
+        if (atBottom) {
+            active = sections[sections.length - 1].id;
+        } else {
+            for (var i = 0; i < sections.length; i++) {
+                if (sections[i].getBoundingClientRect().top - offset <= 0) { active = sections[i].id; }
+            }
+        }
+        if (active) { setActive(active); } else if (current) {
+            current = null;
+            links.forEach(function (a) { a.classList.remove('active'); a.removeAttribute('aria-current'); });
+        }
+    }
+
+    var ticking = false;
+    function onScroll() {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(function () { update(); ticking = false; });
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    window.addEventListener('load', update);
+    update();
+})();
+</script>
 
 </body>
 </html>
